@@ -2,7 +2,7 @@
 
 ## Repository for the medium article.
 
-* The processed data is included as a tar ball. 
+* The processed data is included as a tarball. 
 
 * The CNN codes are in the folder *python_code*
   * *cnn.py*: serial CNN code
