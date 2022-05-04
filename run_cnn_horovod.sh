@@ -6,14 +6,8 @@
 #SBATCH --cpus-per-task=16
 #SBATCH --gres=gpu:2 #### < change
 #SBATCH --partition=m100_usr_prod
-#SBATCH -A cin_staff
+#SBATCH -A  # fill your account here <<<<
 #SBATCH --time=00:30:00
-
-export TMPDIR="/m100_scratch/userinternal/bagarwal/tmp" #### < change the folder here once
-export TEMPDIR="/m100_scratch/userinternal/bagarwal/tmp" #### < change the folder here once 
-export TMP="/m100_scratch/userinternal/bagarwal/tmp" #### < change the folder here once
-export TEMP="/m100_scratch/userinternal/bagarwal/tmp" #### < change the folder here once
-echo $TMPDIR
 
 module purge
 module load profile/deeplrn
@@ -22,8 +16,7 @@ module load autoload cineca-ai/1.0.0
 source  /cineca/prod/opt/tools/anaconda/2020.11/none/etc/profile.d/conda.sh
 conda activate $CINECA_AI_ENV
 
-cd /m100_work/cin_staff/bagarwal/chips_git
- #### < change the folder here once
+cd # directory where you cloned the repo <<<<<<
 
 echo 'all modules loaded'
 

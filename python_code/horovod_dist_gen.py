@@ -1,6 +1,4 @@
 import sys
-
-sys.path.append('/m100/home/userinternal/bagarwal/.conda/envs/dsdl/lib/python3.8/site-packages')
 import pandas as pd
 import seaborn as sns
 from PIL import Image, ImageOps
@@ -35,10 +33,10 @@ if gpus:
 print(f'found {hvd.size()} GPU device(s)')
 
 # load the data
-train_data_path = '/m100_work/cin_staff/bagarwal/chips/prepared_data_extra_images_500/Train'
-test_data_path = '/m100_work/cin_staff/bagarwal/chips/prepared_data_extra_images_500/Test'
+train_data_path = 'prepared_data_extra_images_500/Train'
+test_data_path = 'prepared_data_extra_images_500/Test'
 
-plot_path = '/m100_work/cin_staff/bagarwal/chips_git'  #### < change this once
+plot_path = ''  #### < change this once
 
 # some model params
 batch_size = 64

@@ -1,5 +1,4 @@
 import sys
-sys.path.append('/m100/home/userinternal/bagarwal/.conda/envs/dsdl/lib/python3.8/site-packages')
 import numpy as np
 import pandas as pd
 import seaborn as sns
@@ -20,12 +19,11 @@ np.random.seed(1234)
 tf.random.set_seed(1234)
 
 # load the data
-train_data_path = '/m100_work/cin_staff/bagarwal/chips/prepared_data_extra_images_500/Train'
-test_data_path = '/m100_work/cin_staff/bagarwal/chips/prepared_data_extra_images_500/Test'
+train_data_path = 'prepared_data_extra_images_500/Train'
+test_data_path = 'prepared_data_extra_images_500/Test'
 
-plot_path = '/m100_work/cin_staff/bagarwal/chips_git'  #### < change this once
+plot_path = ''  #### < change this once
 
-# num_classes = len(np.unique(y))
 num_classes = 2
 reg = tf.keras.regularizers.l2(l2=0.0015)
 do = 0.5
@@ -37,7 +35,9 @@ epochs = 100
 
 img_height = 500
 img_width = 500
-#########################################
+
+# PICK ONE BELOW
+######################################### Option 1
 # X_train = tkp.image_dataset_from_directory(
 #  train_data_path,
 #  validation_split=0.15,
@@ -56,7 +56,7 @@ img_width = 500
 #
 # train_dataset = X_train.cache()
 # val_dataset = X_val.cache()
-##########################################
+########################################## Option 2
 
 img_gen=tf.keras.preprocessing.image.ImageDataGenerator(validation_split=0.15)
 train_dataset=img_gen.flow_from_directory(directory= train_data_path,target_size=(img_height,img_width),
