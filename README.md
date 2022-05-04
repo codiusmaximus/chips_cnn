@@ -1,8 +1,6 @@
 # Parallelising a CNN code using Horovod and GPUs
 
-## Repository for the medium article: *How to train a neural network using Horovod and GPU for a 75x speed-up.*
-
-
+## Repository for the medium article.
 
 * The processed data is included as a tar ball. 
 
