@@ -1,6 +1,6 @@
 # Parallelising a CNN code using Horovod and GPUs
 
-## Repository for the medium article.
+## Repository for the [medium article](https://towardsdatascience.com/how-to-reduce-the-training-time-of-your-neural-network-from-hours-to-minutes-fe7533a3eec5).
 
 * The processed data is included as a tarball. 
 
